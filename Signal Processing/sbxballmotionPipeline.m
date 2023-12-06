@@ -13,6 +13,11 @@ end
 
 %Then we compute the data
 bFiles =  ls([folder2process '*_ball.mat']);
+if isempty(bFiles)
+    ballVideoConverter(folder2process)
+bFiles =  ls([folder2process '*_ball.mat']);
+
+end
 ballAll = []; 
 timeAll = [0];
 for b = 1:size(bFiles,1)

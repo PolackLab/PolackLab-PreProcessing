@@ -114,6 +114,7 @@ fprintf(' - Total time : %5.2f seconds \n',tt)
 %% Loc, pupil and licking
 locTime=tic;
 % Locomotion
+
 [ballAll, timeBall] = sbxballmotionPipeline(folder2process,WhereImgIs);
 %Licking
 [~,~, ~,~, ~, lick, ~, dx] = getIgorsY(folder2process); % get the lick movies
@@ -169,6 +170,7 @@ cuttingTime =toc(cuttingTime);
 fprintf(' - Trial slices cut from all variables in %5.2f seconds \n',cuttingTime)
 tt = toc(totalTime);
 fprintf(' - Total time : %5.2f seconds \n',tt)
+
 %% Tuning curves
 tuningTime=tic;
 % prepare matrices with responses to the OT stims
